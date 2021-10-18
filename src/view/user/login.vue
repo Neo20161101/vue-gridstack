@@ -1,61 +1,59 @@
 <template>
   <div class="login-form">
-<!--  <a-form-->
-<!--    id="components-form-demo-normal-login"-->
-<!--    :form="form"-->
-<!--    @submit="handleSubmit"-->
-<!--  >-->
-<!--    <a-form-item>-->
-<!--      <a-input-->
-<!--        v-decorator="[-->
-<!--          'Name',-->
-<!--          { rules: [{ required: true, message: '请输入账号名称!' }] },-->
-<!--        ]"-->
-<!--        placeholder="请输入账号"-->
-<!--      >-->
-<!--        <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)" />-->
-<!--      </a-input>-->
-<!--    </a-form-item>-->
-<!--    <a-form-item>-->
-<!--      <a-input-->
-<!--        v-decorator="[-->
-<!--          'password',-->
-<!--          { rules: [{ required: true, message: '请输入密码!' }] },-->
-<!--        ]"-->
-<!--        type="password"-->
-<!--        placeholder="请输入密码"-->
-<!--      >-->
-<!--        <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />-->
-<!--      </a-input>-->
-<!--    </a-form-item>-->
-<!--    <a-form-item>-->
-<!--      <a-checkbox-->
-<!--        v-decorator="[-->
-<!--          'remember',-->
-<!--          {-->
-<!--            valuePropName: 'checked',-->
-<!--            initialValue: true,-->
-<!--          },-->
-<!--        ]"-->
-<!--        @change="handleChange"-->
-<!--      >-->
-<!--        记住账号-->
-<!--      </a-checkbox>-->
-<!--      <a class="login-form-forgot" href="">-->
-<!--        忘记密码-->
-<!--      </a>-->
-<!--      <a-button type="primary" html-type="submit" class="login-form-button" block>-->
-<!--        登录-->
-<!--      </a-button>-->
+  <a-form
+    id="components-form-demo-normal-login"
+    :form="form"
+    @submit="handleSubmit"
+  >
+    <a-form-item>
+      <a-input
+        v-decorator="[
+          'Name',
+          { rules: [{ required: true, message: '请输入账号名称!' }] },
+        ]"
+        placeholder="请输入账号"
+      >
+        <a-icon slot="prefix" type="user" style="color: rgba(0,0,0,.25)" />
+      </a-input>
+    </a-form-item>
+    <a-form-item>
+      <a-input
+        v-decorator="[
+          'password',
+          { rules: [{ required: true, message: '请输入密码!' }] },
+        ]"
+        type="password"
+        placeholder="请输入密码"
+      >
+        <a-icon slot="prefix" type="lock" style="color: rgba(0,0,0,.25)" />
+      </a-input>
+    </a-form-item>
+    <a-form-item>
+      <a-checkbox
+        v-decorator="[
+          'remember',
+          {
+            valuePropName: 'checked',
+            initialValue: true,
+          },
+        ]"
+        @change="handleChange"
+      >
+        记住账号
+      </a-checkbox>
+      <a class="login-form-forgot" href="">
+        忘记密码
+      </a>
+      <a-button type="primary" html-type="submit" class="login-form-button" block>
+        登录
+      </a-button>
 
-<!--      Or-->
-<!--      <a href="">-->
-<!--        注册!-->
-<!--      </a>-->
-<!--    </a-form-item>-->
-<!--  </a-form>-->
-    <Button type="primary">随风倒十分</Button>
-    <a-button type="primary">hello world</a-button>
+      Or
+      <a href="">
+        注册!
+      </a>
+    </a-form-item>
+  </a-form>
   </div>
 </template>
 
@@ -66,8 +64,7 @@ export default {
   data() {
     return {
       formLayout: 'horizontal',
-      form:null,
-      // form: this.$form.createForm(this, { name: 'coordinated' }),
+      form: this.$form.createForm(this, { name: 'coordinated' }),
     };
   },
   comments:{AButton:Button},

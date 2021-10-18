@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from "./router/router.js"
-// import Antd from 'ant-design-vue/es';
-// import 'ant-design-vue/dist/antd.less';
+import Antd from 'ant-design-vue/es';
+import 'ant-design-vue/dist/antd.less';
+import './style.less';
 import VueRouter from 'vue-router'
 Vue.config.productionTip = false
-// Vue.use(Antd);
+Vue.use(Antd);
 Vue.use(VueRouter);
 const originalReplace = VueRouter.prototype.replace;
 VueRouter.prototype.replace = function replace(location) {

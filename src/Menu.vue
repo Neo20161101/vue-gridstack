@@ -1,75 +1,17 @@
 <template>
   <a-layout-sider
-    width="200"
-    style="background: linear-gradient(#1b61e9, #0a2b9e)"
+    theme="light"
   >
-    <div class="Sider_title">
-      <div
-        class="Icon_img"
-        :style="{
-          backgroundImage: 'url(/pic/icons/icon.png)',
-          backgroundPosition: treedata[0].Icon,
-          display: 'inline-block',
-        }"
-      ></div>
-      <span class="name">{{ treedata[0].Name }}</span>
+    <div class="menu">
+      dsadsa
     </div>
-    <a-menu
-      :selectedKeys="selectedData"
-      mode="inline"
-      :inline-collapsed="collapsed"
-      @click="handleMenuClick"
-    >
-      <template v-for="item in treedata[0].Children">
-        <a-menu-item v-if="!item.Children" :key="item.Path" :title="item.Name">
-          <div
-            class="Icon_img2"
-            :style="{
-              backgroundImage: 'url(/pic/icons/icon.png)',
-              backgroundPosition: item.Icon,
-              display: 'inline-block',
-            }"
-          ></div>
-          <span>{{ item.Name }}</span>
-        </a-menu-item>
-        <sub-menu v-else :key="item.Path" :menu-info="item" />
-      </template>
-    </a-menu>
   </a-layout-sider>
 </template>
 <script>
-import { Menu } from "ant-design-vue";
 import Store from "@/AppStore";
-const SubMenu = {
-  template: `
-      <a-sub-menu :key="menuInfo.Path" v-bind="$props" v-on="$listeners">
-        <span slot="title">
-          <a-icon type="mail" /><span>{{ menuInfo.Name }}</span>
-        </span>
-        <template v-for="item in menuInfo.Children">
-          <a-menu-item v-if="!item.Children" :key="item.Path">
-            <a-icon type="pie-chart" />
-            <span>{{ item.Name }}</span>
-          </a-menu-item>
-          <sub-menu v-else :key="item.Path" :menu-info="item" />
-        </template>
-      </a-sub-menu>
-    `,
-  name: "SubMenu",
-  // must add isSubMenu: true
-  isSubMenu: true,
-  props: {
-    ...Menu.SubMenu.props,
-    // Cannot overlap with properties within Menu.SubMenu.props
-    menuInfo: {
-      type: Object,
-      default: () => ({}),
-    },
-  },
-};
 export default {
   components: {
-    "sub-menu": SubMenu,
+
   },
   data() {
     return {
@@ -140,4 +82,8 @@ export default {
 };
 </script>
 <style lang="less">
+.menu{
+  height:100%;
+  border:1px solid red;
+}
 </style>
