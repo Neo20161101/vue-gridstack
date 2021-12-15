@@ -15,9 +15,9 @@ const setHearder = () => {
 
 class Http {
     // 测试
-    fetchTest = (body) => {
+    fetchLogin = (body) => {
         setHearder();
-        return Fetch("/users/test", "post", body);
+        return Fetch("/login", "post", body);
     }
 }
 

@@ -1,18 +1,18 @@
 import axios from 'axios';
 import { notification } from 'ant-design-vue';
 
-const foodstp = "https://foodstp.com/";
-const localhost = "http://localhost:3001/";
+const foodstp = "https://makeabi.lycent.cn/";
+const localhost = "http://192.168.10.187/";
 
 const hearder = {
     'X-Requested-With': 'XMLHttpRequest',
-    'ApiKey': ''
+    'Content-Type': 'application/x-www-form-urlencoded'
 }
 async function Fetch(url, method, body) {
     return await axios({
         method: method,
         url: url,
-        baseURL: localhost,
+        baseURL: foodstp,
         data: body,
         headers: hearder
     }).then(function (response) {
@@ -54,4 +54,4 @@ async function Fetch(url, method, body) {
 
 }
 
-export { hearder, Fetch } 
+export { hearder, Fetch }

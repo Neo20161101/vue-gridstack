@@ -1,49 +1,25 @@
 {
-  "name": "vue-mobx-admin",
-  "version": "0.1.0",
-  "private": true,
+  "name": "web",
+  "version": "0.0.0",
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
-    "ant-design-vue": "^1.7.1",
-    "axios": "^0.21.0",
-    "core-js": "^3.6.5",
-    "gridstack": "^4.2.7",
-    "vue": "^2.6.11",
-    "vue-router": "^3.4.8"
+    "@vue/babel-plugin-jsx": "^1.1.0",
+    "ant-design-vue": "^3.0.0-alpha.14",
+    "axios": "^0.22.0",
+    "gridstack": "^4.3.1",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-import": "^1.13.1",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "less": "^3.12.2",
-    "less-loader": "^6.0.0",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "@vitejs/plugin-vue": "^1.9.2",
+    "@vitejs/plugin-vue-jsx": "^1.2.0",
+    "unplugin-vue-components": "^0.15.6",
+    "vite": "^2.6.0"
+  }
 }
